@@ -1,0 +1,29 @@
+
+{{form_start(form , {'attr':{'novalidate': 'novalidate'}} )}}
+<table>
+
+<tr>
+<td> {{ form_label(form.nom_cand ,"nom_cand ") }}</td>
+<td> {{ form_widget(form.nom_cand ) }}</td>
+<td> {{ form_errors(form.nom_cand ) }}</td>
+</tr>
+<tr>
+<td> {{ form_label(form.prenom_cand ,"prenom_cand") }}</td>
+<td> {{ form_widget(form.prenom_cand)}}</td>
+<td> {{ form_errors(form.prenom_cand ) }}</td>  
+
+</tr>
+
+<tr>
+<td> {{ form_label(form.mail,"mail") }}</td>
+<td> {{ form_widget(form.mail)}}</td>
+<td> {{ form_errors(form.mail) }}</td>  
+</tr>
+<tr>
+<td> {{ form_label(form.etat_cand,"etat_cand") }}</td>
+<td> {{ form_widget(form.etat_cand)}}</td>
+<td> {{ form_errors(form.etat_cand) }}</td>  
+</tr> 
+
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
