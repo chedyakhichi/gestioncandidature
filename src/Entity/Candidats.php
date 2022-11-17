@@ -31,6 +31,7 @@ class Candidats
     #[ORM\Column(length: 255)]
     #[Assert\NotBlank(message:"etat_cand is required")]
     private ?string $etat_cand = null;
+    
 
     #[ORM\ManyToMany(targetEntity: Offres::class, mappedBy: 'Candidats')]
     private Collection $offres;

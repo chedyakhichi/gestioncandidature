@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %} 
 
 {% block title %}Candidats index{% endblock %}
  {% block body %}
@@ -12,7 +12,7 @@
                 <th>Nom_cand</th>
                 <th>Prenom_cand</th>
                 <th>Mail</th>
-                <th>Etat_cand</th>
+                 <th>Etat_cand</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -23,7 +23,7 @@
                 <td>{{ candidat.nomCand }}</td>
                 <td>{{ candidat.prenomCand }}</td>
                 <td>{{ candidat.mail }}</td>
-                <td>{{ candidat.etatCand }}</td>
+               <td>{{ candidat.etatCand }}</td> 
                 <td>
                     <a href="{{ path('app_candidats_show', {'id': candidat.id}) }}">show</a>
                     <a href="{{ path('app_candidats_edit', {'id': candidat.id}) }}">edit</a>
