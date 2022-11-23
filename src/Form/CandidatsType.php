@@ -15,7 +15,7 @@ class CandidatsType extends AbstractType
             ->add('nom_cand')
             ->add('prenom_cand')
             ->add('mail')
-            //->add('etat_cand')
+            ->add('etat_cand')
             
         ;
     }

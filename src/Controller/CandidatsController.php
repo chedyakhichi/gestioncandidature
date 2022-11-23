@@ -40,6 +40,29 @@ class CandidatsController extends AbstractController
         ]);
     }
 
+
+    #[Route('/etat', name: 'app_candidats_etat', methods: ['GET', 'POST'])]
+    public function etat(Request $request, CandidatsRepository $candidatsRepository): Response
+    {
+        $candidat = new Candidats();
+        $form = $this->createForm(CandidatsType::class, $candidat);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $candidatsRepository->save($candidat, true);
+
+            return $this->redirectToRoute('app_candidats_index', [], Response::HTTP_SEE_OTHER);
+        }
+
+        return $this->renderForm('candidats/etat.html.twig', [
+            'candidat' => $candidat,
+            'form' => $form,
+        ]);
+    }
+
+
+
+
     #[Route('/{id}', name: 'app_candidats_show', methods: ['GET'])]
     public function show(Candidats $candidat): Response
     {

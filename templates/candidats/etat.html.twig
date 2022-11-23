@@ -1,0 +1,10 @@
+{% extends 'baseBack.html.twig' %}
+
+{% block title %}etat Candidats{% endblock %}
+
+{% block body %}
+    <h1> etat Candidats</h1>
+{{ include('candidats/_form.html.twig') }}
+<!--    <a href="{{ path('app_candidats_index') }}">back to list</a> -->
+    
+{% endblock %}

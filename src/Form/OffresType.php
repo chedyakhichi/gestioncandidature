@@ -15,7 +15,7 @@ class OffresType extends AbstractType
             ->add('titre')
             ->add('description')
             ->add('date_offre')
-           // ->add('Candidats')
+            ->add('Candidats')
         ;
     }
 
