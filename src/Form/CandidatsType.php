@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Form;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 
 use App\Entity\Candidats;
 use Symfony\Component\Form\AbstractType;

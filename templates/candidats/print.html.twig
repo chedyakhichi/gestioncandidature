@@ -1,34 +1,24 @@
-{% extends 'baseBack.html.twig' %}
-
-{% block title %}Candidats{% endblock %}
-
-{% block body %}
-    <h1>Liste des Candidats</h1>
-
-   <!-- <table class="table"> -->
-   <table border="2" id="t" class="table table-hover table-dark">
-      <thead class="thead-dark">
-        <tbody>
-            <tr>
-                <th scoop ="row"> Id</th>
-                <th scoop ="row">nomCand</th>
-                th scoop ="row">prenomCand</th>
-                th scoop ="row">mail</th>
-            </tr> </thead>
-            {% for Candidats in Candidats %}
-             <tr>
-                <td>{{ candidat.prenomCand }}</td>
-                <td>{{ candidat.nomCand }}</td>
-                <td>{{ candidat.mail }}</td>
-            </tr>
-        
-          
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_candidats_index') }}">back to list</a>
-
-    <a href="{{ path('app_candidats_edit', {'id': candidat.id}) }}">edit</a>
-
-    {{ include('candidats/_delete_form.html.twig') }}
-{% endblock %}
+  
+                   <h1>
+                   chedya l 3sal 
+                   </h1>
+  
+                             <table border="2">
+                               <tr>
+                                       <th >Nom </th>
+                                  
+                                        <th >Prenom</th>
+                                        <th >Mail</th>
+                    
+                                    </tr>
+                             
+                             
+                                {% for i in Candidats  %}
+                                <tr>
+                                            <td>{{i.nomCand}}</td>
+                                            <td>{{i.prenomCand}}</td>
+                                            <td>{{i.mail}}</td>
+                                 
+                                            </tr>
+                                            {% endfor %}
+                                            </table> 

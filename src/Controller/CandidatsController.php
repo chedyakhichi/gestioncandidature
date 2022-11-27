@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Entity\Candidats;
 use App\Form\CandidatsType;
 use App\Repository\CandidatsRepository;
+use Dompdf\Dompdf;
+use Dompdf\Options;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -13,6 +15,11 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/candidats')]
 class CandidatsController extends AbstractController
 {
+     
+    
+    
+    
+    
     #[Route('/', name: 'app_candidats_index', methods: ['GET'])]
     public function index(CandidatsRepository $candidatsRepository): Response
     {
@@ -20,6 +27,9 @@ class CandidatsController extends AbstractController
             'candidats' => $candidatsRepository->findAll(),
         ]);
     }
+
+
+
 
     #[Route('/new', name: 'app_candidats_new', methods: ['GET', 'POST'])]
     public function new(Request $request, CandidatsRepository $candidatsRepository): Response
@@ -98,4 +108,7 @@ class CandidatsController extends AbstractController
 
         return $this->redirectToRoute('app_candidats_index', [], Response::HTTP_SEE_OTHER);
     }
+
+
+
 }
